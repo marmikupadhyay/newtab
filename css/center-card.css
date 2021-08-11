@@ -1,0 +1,80 @@
+.center-card {
+  background-color: #15191b;
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  height: 20vh;
+  transition: 0.5s;
+  width: 40%;
+  padding: 2em;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+
+.form-box {
+  width: 100%;
+}
+
+.fab-wrapper {
+  margin-top: 4em;
+  position: relative;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center;
+  transition: 0.5s;
+}
+
+.fa {
+  font-size: 2em;
+}
+.fa-search {
+  font-size: 1.5em;
+}
+
+.fab {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  background: blue;
+  border-radius: 50%;
+  background: #126ee2;
+  box-shadow: 0px 5px 20px #81a4f1;
+  transition: all 0.3s ease;
+  z-index: 1;
+  border: 1px solid #0c50a7;
+}
+
+.fab-wheel {
+  width: 22em;
+  height: 22em;
+  margin: auto;
+  transition: all 0.3s ease;
+  transform-origin: center;
+  transform: scale(0);
+}
+
+.fab-action {
+  position: absolute;
+  background: #0f1941;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: White;
+  box-shadow: 0 0.1rem 1rem rgba(24, 66, 154, 0.82);
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+.fab-wrapper {
+  transform: scale(0);
+}

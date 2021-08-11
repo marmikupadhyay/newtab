@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/fab.css" />
+    <link rel="stylesheet" href="css/center-card.css" />
+    <link rel="stylesheet" href="css/left-card.css" />
+    <link rel="stylesheet" href="css/right-card.css" />
+    <link rel="stylesheet" href="css/terminal.css" />
+    <title>New Tab</title>
+  </head>
+  <body>
+    <div class="glass"></div>
+    <div class="wrapper">
+      <div class="left-card main-card shadow-2xl flex flex-col rounded-lg"></div>
+      <div class="center-card main-card shadow-2xl flex flex-col rounded-lg">
+        <!-- Search bar -->
+        <div class="form-box p-4 flex justify-around">
+          <input
+            class="
+              w-9/12 rounded-l-lg p-3 border-t mr-0 border-b border-l text-gray-800 border-gray-200 transform bg-white
+            "
+            id="search-input"
+            placeholder="Try Seaching Something..."
+          />
+          <button
+            class="
+              w-3/12
+              rounded-r-lg
+              bg-pink-600
+              text-gray-800
+              font-bold
+              p-2
+              uppercase
+              border-pink-700 border-t border-b border-r
+            "
+            id="search-btn"
+          >
+            <i class="fa text-white fa-search"></i>
+          </button>
+        </div>
+
+        <!-- Fab wrapper -->
+        <div class="fab-wrapper">
+          <input
+            id="fabCheckbox"
+            type="checkbox"
+            checked
+            class="fab-checkbox"
+          />
+          <label class="fab" for="fabCheckbox">
+            <span class="fab-dots fab-dots-1"></span>
+            <span class="fab-dots fab-dots-2"></span>
+            <span class="fab-dots fab-dots-3"></span>
+          </label>
+          <div class="fab-wheel"></div>
+        </div>
+      </div>
+      <div class="right-card main-card shadow-2xl flex flex-col rounded-lg"></div>
+    </div>
+
+    <!-- Terminal -->
+    <div class="cv-code" id="terminal">
+      <div class="cv-code-header">
+        <div class="cv-code-buttons">
+          <span class="fake-button --close" data-close=""></span>
+          <span class="fake-button --minify" data-minify=""></span>
+          <span class="fake-button --expand" data-expand=""></span>
+        </div>
+        <span class="cv-code-title">marmik@marmik-HP-Pavilion-Laptop: ~</span>
+      </div>
+      <div class="cv-code-body">
+        <div id="command-history">
+        </div>
+        <div class="command-form p-2 py-0 flex items-center">
+          <div class="prompt w-3/12">
+            <span class="user">gojo@satoru : </span>
+          </div>
+          <div class="-ml-10 w-9/12">
+            <input class="w-full p-1 border-t" id="command-input"/>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/links.js"></script>
+    <script src="js/timeTable.js"></script>
+    <script src="js/terminalCommands.js"></script>
+    <script src="js/left-card.js"></script>
+    <script src="js/right-card.js"></script>
+    <script src="js/center-card.js"></script>
+    <script src="js/terminal.js"></script>
+  </body>
+</html>

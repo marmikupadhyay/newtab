@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@500&display=swap");
+.cv-code {
+  border-radius: 0.5rem;
+  background: #1f1e1e;
+  width: 40%;
+  height: 30vh;
+  position: absolute;
+  top: 80vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cv-code-header {
+  display: flex;
+  height: 4vh;
+  cursor: move;
+  align-items: center;
+  background: #393d3e;
+  color: #eee;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 0.5rem 0.5rem 0 0;
+  position: relative;
+  font-family: "JetBrains Mono", monospace;
+}
+.cv-code-buttons {
+  margin-right: 1rem;
+  display: flex;
+  gap: 6px;
+}
+.cv-code-buttons .fake-button[data-close] {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #f77669;
+}
+.cv-code-buttons .fake-button[data-minify] {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #ffcb6b;
+}
+.cv-code-buttons .fake-button[data-expand] {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #c3e88d;
+}
+.cv-code-title {
+  margin: 0 auto;
+  display: block;
+}
+
+.user {
+  color: #6db928;
+}
+
+#command-input {
+  background: transparent;
+  color: white;
+  outline: none;
+  border :none;
+  overflow-y:scroll;
+}
+
+#command-input:hover, #command-input:focus{
+  transform: scale(1);
+  outline: none;
+  border :none;
+}
+
+.cv-code-body{
+  overflow-y: auto;
+  height: 26vh;
+}

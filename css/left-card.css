@@ -1,0 +1,11 @@
+.left-card {
+    background-color: #15191b;
+    position: absolute;
+    top: 50vh;
+    left: 0;
+    height: 90vh;
+    transition: 0.5s;
+    width: 27%;
+    padding: 1em;
+    transform: translateY(-50%);
+}

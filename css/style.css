@@ -1,0 +1,33 @@
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.glass{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+textarea,input,button{
+  transition: 0.5s;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+  transform: scale(1.05);
+}
+
+textarea:hover, input:hover, button:hover{
+  outline: none;
+  transform: scale(1.05);
+}
