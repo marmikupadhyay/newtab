@@ -33,21 +33,22 @@ const commandSolution = {
   search: handleSearchCommand,
   clear: handleClearCommand,
   toggle: handleToggleCommand,
-  bg : handleBackgroundCommand,
-  sh : handleShorthandCommand,
+  bg: handleBackgroundCommand,
+  sh: handleShorthandCommand,
   theme: handleThemeCommand,
-  style : handleStyleCommand,
+  style: handleStyleCommand,
+  play: handlePlayCommand,
 };
 
-const evalCommand = (keyword, params) => {
+const evalCommand = async (keyword, params) => {
   const availCommands = Object.keys(commandSolution);
   if (availCommands.indexOf(keyword) == -1)
     return `command not found: ${keyword}`;
-  return commandSolution[keyword](params);
+  return await commandSolution[keyword](params);
 };
 
 let commandInput = document.getElementById("command-input");
-commandInput.addEventListener("keydown", function (e) {
+commandInput.addEventListener("keydown", async function (e) {
   if (e.keyCode == 13) {
     if (commandInput.value == "") return;
     let command = commandInput.value;
@@ -56,13 +57,16 @@ commandInput.addEventListener("keydown", function (e) {
     let commandObj = {};
     commandObj.input = command;
     commandInput.value = "";
-    commandObj.output = evalCommand(words[0], words.slice(1));
-    if(commandObj.output != "") commandHistory.push(commandObj);
+
+    if (command.length === 1) {
+      commandObj.output = handleEmbedVideo(command);
+    } else commandObj.output = await evalCommand(words[0], words.slice(1));
+    if (commandObj.output != "") commandHistory.push(commandObj);
     showCommandHistory();
   }
 });
 
 let url = localStorage.getItem("bg-url");
-let body=document.getElementsByTagName('body')[0];
-body.style.backgroundImage = "url("+url+")";
+let body = document.getElementsByTagName("body")[0];
+body.style.backgroundImage = "url(" + url + ")";
 applyTheme(currTheme);

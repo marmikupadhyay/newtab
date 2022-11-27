@@ -1,0 +1,25 @@
+let workoutData = {
+  name: "AB Workout",
+  steps : [
+    {title:"Scissor kicks", description:""},
+    {title:"Lying leg raise", description:""},
+    {title:"Feet crossover", description:""},
+    {title:"Reverse crunch", description:""},
+    {title:"L Sit Toe Touch", description:""},
+    {title:"Rest and stretch", description:""},
+    {title:"Plank knees in", description:""},
+    {title:"Spider man push up", description:""},
+    {title:"Side plank raises", description:""},
+    {title:"Side plank raises", description:""},
+    {title:"Mountain climber", description:""},
+    {title:"Ab contraction", description:""},
+    {title:"Oblique leg raise", description:""},
+    {title:"Body weight crunches", description:""},
+    {title:"V sit static hold", description:""},
+    {title:"Plank static hold", description:""},
+    {title:"Ab wheel rollout", description:""},
+    {title:"Oblique BB row", description:""},
+    {title:"Sit up cross punch", description:""},
+    {title:"Leg raise hold", description:""},
+  ]
+};

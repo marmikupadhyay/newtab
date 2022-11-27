@@ -1,0 +1,27 @@
+.workout-box {
+  display: none;
+  width: 50%;
+  height: 50vh;
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.workout-box-body{
+  height: 40vh;
+}
+
+.steps-container {
+  transition: all 0.3s ease;
+}
+
+.step{
+  transition: all 0.25s ease;
+}
+
+.active-step{
+  transform: scale(1.05);
+  background-color: #5cb55c;
+  box-shadow: 0 0 10px #5cb55c;
+}

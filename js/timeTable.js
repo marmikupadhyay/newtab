@@ -1,188 +1,188 @@
 const timeTable = {
-  Monday: {
-    lectures: [
-      {
-        name: "CSPE51 - AR/VR",
-        start: "09:30",
-        end: "10:20",
-        teacher: "Dr. M. Sridevi",
-      },
-      {
-        name: "CSPC53 - CN",
-        start: "10:30",
-        end: "11:20",
-        teacher: "Dr. S. Mary Saira Bhanu",
-      },
-      {
-        name: "CSPC54 - AI/ML",
-        start: "11:30",
-        end: "12:20",
-        teacher: "Dr. R. Mohan",
-      },
-      {
-        name: "CSPC51 - Comp Arch",
-        start: "12:30",
-        end: "13:20",
-        teacher: "Dr. B. Shameeda Begum",
-      },
-      {
-        name: "Management",
-        start: "14:00",
-        end: "14:50",
-        teacher: `Janarthanan Balakrishnan`,
-      },
-      {
-        name: "CSPE56 - Cloud",
-        start: "16:00",
-        end: "16:50",
-        teacher: "Dr. Sayantan S. Nath",
-      },
-    ],
-    labs: [],
-    tests: [],
-  },
-  Tuesday: {
-    lectures: [
-      {
-        name: "CSPE56 - Cloud",
-        start: "09:30",
-        end: "10:20",
-        teacher: "Dr. M. Sridevi",
-      },
-      {
-        name: "CSPC54 - AI/ML",
-        start: "10:30",
-        end: "11:20",
-        teacher: "Dr. R. Mohan",
-      },
-      {
-        name: "CSPC53 - CN",
-        start: "11:30",
-        end: "12:20",
-        teacher: "Dr. S. Mary Saira Bhanu",
-      },
-      {
-        name: "CSPC52 - DBMS",
-        start: "12:30",
-        end: "13:20",
-        teacher: "Dr. E. Sivasankar",
-      },
-      {
-        name: "Management",
-        start: "14:00",
-        end: "14:50",
-        teacher: `Janarthanan Balakrishnan`,
-      },
-      {
-        name: "CSPC51 - Comp Arch",
-        start: "15:00",
-        end: "17:50",
-        teacher: "Dr. B. Shameeda Begum",
-      },
-    ],
-    labs: [],
-    tests: [],
-  },
-  Wednesday: {
-    lectures: [
-      {
-        name: "CSPC54 - AI/ML",
-        start: "10:30",
-        end: "12:20",
-        teacher: "Dr. R. Mohan",
-      },
-      {
-        name: "CSPC52 - DBMS",
-        start: "12:30",
-        end: "13:20",
-        teacher: "Dr. E. Sivasankar",
-      },
-    ],
-    labs: [],
-    tests: [],
-  },
-  Thursday: {
-    lectures: [
-      {
-        name: "CSPC54 - AI/ML",
-        start: "09:30",
-        end: "10:20",
-        teacher: "Dr. R. Mohan",
-      },
-      {
-        name: "CSPE56 - Cloud",
-        start: "10:30",
-        end: "11:20",
-        teacher: "Dr. Sayantan S. Nath",
-      },
-      {
-        name: "CSPE51 - AR/VR",
-        start: "11:30",
-        end: "12:20",
-        teacher: "Dr. M. Sridevi",
-      },
-      {
-        name: "CSPC53 - CN",
-        start: "12:30",
-        end: "13:20",
-        teacher: "Dr. S. Mary Saira Bhanu",
-      },
-    ],
-    labs: [
-      {
-        name: "CSLR52 - CN",
-        start: "15:00",
-        end: "18:00",
-        teacher: "Dr. Chandramani Chaudhary",
-      },
-    ],
-    tests: [],
-  },
-  Friday: {
-    lectures: [
-      {
-        name: "CSPC52 - DBMS",
-        start: "09:30",
-        end: "10:20",
-        teacher: "Dr. E. Sivasankar",
-      },
-      {
-        name: "CSPE51 - AR/VR",
-        start: "10:30",
-        end: "11:20",
-        teacher: "Dr. M. Sridevi",
-      },
-      {
-        name: "CSPC51 - Comp Arch",
-        start: "11:30",
-        end: "12:20",
-        teacher: "Dr. B. Shameeda Begum",
-      },
-      {
-        name: "CSPC53 - CN",
-        start: "12:30",
-        end: "13:20",
-        teacher: "Dr. S. Mary Saira Bhanu",
-      },
-    ],
-    labs: [
-      {
-        name: "CSLR51 - DBMS",
-        start: "15:00",
-        end: "18:00",
-        teacher: "Dr. E. Sivasankar",
-      },
-    ],
-    tests: [],
-  },
-  Saturday: {
-    lectures: [],
-    labs: [],
-    tests: [],
-  },
-  Sunday: {
-    lectures: [],
-    labs: [],
-    tests: [],
-  },
+	Monday: {
+		lectures: [
+			{
+				name: 'CSPC61 - Embedded',
+				start: '08:30',
+				end: '09:20',
+				teacher: '',
+			},
+			{
+				name: 'CSPC62-Compiler',
+				start: '09:30',
+				end: '10:20',
+				teacher: 'Dr. Kamalika Bhattacharjee',
+			},
+			{
+				name: 'HSIR14 - Professional Ethics',
+				start: '11:30',
+				end: '12:20',
+				teacher: 'Dr. Chandana Deka',
+			},
+		],
+		labs: [
+			{
+				name: 'CSLR61 - Embedded Lab',
+				start: '14:30',
+				end: '17:10',
+				teacher: '',
+			},
+		],
+		tests: [],
+	},
+	Tuesday: {
+		lectures: [
+			{
+				name: 'CSPE65 - ML',
+				start: '09:30',
+				end: '10:20',
+				teacher: 'Dr. R. Bala Krishnan',
+			},
+			{
+				name: 'CSPC63 - Cryptography',
+				start: '10:30',
+				end: '11:20',
+				teacher: 'Dr. Kunwar Singh',
+			},
+			{
+				name: 'CSPC62-Compiler',
+				start: '11:30',
+				end: '12:20',
+				teacher: 'Dr. Kamalika Bhattacharjee',
+			},
+			{
+				name: 'Management',
+				start: '13:30',
+				end: '14:20',
+				teacher: ``,
+			},
+			{
+				name: 'HSIR14 - Professional Ethics',
+				start: '14:30',
+				end: '15:20',
+				teacher: 'Dr. Chandana Deka',
+			},
+		],
+		labs: [],
+		tests: [],
+	},
+	Wednesday: {
+		lectures: [
+			{
+				name: 'CSPC63 - Cryptography',
+				start: '09:30',
+				end: '10:20',
+				teacher: 'Dr. Kunwar Singh',
+			},
+			{
+				name: 'CSPE64 - Data Analytics',
+				start: '10:30',
+				end: '11:20',
+				teacher: 'Dr. E. Sivasankar',
+			},
+			{
+				name: 'CSPE65 - ML',
+				start: '11:30',
+				end: '12:20',
+				teacher: 'Dr. R. Bala Krishnan',
+			},
+			{
+				name: 'Management',
+				start: '14:30',
+				end: '15:20',
+				teacher: ``,
+			},
+			{
+				name: 'CSPC62-Compiler',
+				start: '15:30',
+				end: '16:20',
+				teacher: 'Dr. Kamalika Bhattacharjee',
+			},
+		],
+		labs: [],
+		tests: [],
+	},
+	Thursday: {
+		lectures: [
+			{
+				name: 'CSPC62-Compiler',
+				start: '08:30',
+				end: '09:20',
+				teacher: 'Dr. Kamalika Bhattacharjee',
+			},
+			{
+				name: 'CSPC62-Compiler',
+				start: '09:30',
+				end: '10:20',
+				teacher: 'Dr. Kamalika Bhattacharjee',
+			},
+			{
+				name: 'CSPC61 - Embedded',
+				start: '11:30',
+				end: '12:20',
+				teacher: '',
+			},
+			{
+				name: 'Management',
+				start: '13:30',
+				end: '14:20',
+				teacher: ``,
+			},
+		],
+		labs: [
+			{
+				name: 'CSLR62 - App Dev Lab',
+				start: '14:20',
+				end: '17:10',
+				teacher: 'Dr. M. Sridevi',
+			},
+		],
+		tests: [],
+	},
+	Friday: {
+		lectures: [
+			{
+				name: 'CSPE65 - ML',
+				start: '08:30',
+				end: '09:20',
+				teacher: 'Dr. R. Bala Krishnan',
+			},
+			{
+				name: 'CSPE64 - Data Analytics',
+				start: '10:30',
+				end: '11:20',
+				teacher: 'Dr. E. Sivasankar',
+			},
+			{
+				name: 'CSPC63 - Cryptography',
+				start: '11:30',
+				end: '12:20',
+				teacher: 'Dr. Kunwar Singh',
+			},
+			{
+				name: 'HSIR14 - Professional Ethics',
+				start: '14:30',
+				end: '15:20',
+				teacher: 'Dr. Chandana Deka',
+			},
+			{
+				name: 'CSPC61 - Embedded',
+				start: '16:30',
+				end: '17:20',
+				teacher: '',
+			},
+		],
+		labs: [],
+		tests: [],
+	},
+	Saturday: {
+		lectures: [],
+		labs: [],
+		tests: [],
+	},
+	Sunday: {
+		lectures: [],
+		labs: [],
+		tests: [],
+	},
 };

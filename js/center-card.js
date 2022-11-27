@@ -22,30 +22,6 @@ $searchInput.addEventListener("keydown",function(e){
     if ( key == 88 && ctrl ) $searchInput.value = "";
 });
 
-const $fab = document.getElementsByClassName("fab-wheel")[0];
-
-links.forEach(function(link, index) {
-    var $link = document.createElement("a");
-    $link.classList = `fab-action fab-action-${index + 1}`;
-    $link.innerHTML = `<i class="fa fa-${link.name}"></i>`;
-    $link.style.color = link.color;
-    $link.style.background = link.backgroundColor;
-
-    $link.addEventListener("click", function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        window.open(link.link, '_blank');
-    });
-    $fab.appendChild($link);
-});
-
-
-let fab_buttons = document.querySelectorAll('.fab-action');
-fab_buttons.forEach((button,index) =>{
-    button.style.left = `${links[index].x}%`;
-    button.style.top = `${links[index].y}%`;
-}); 
-
 const $fab_wrapper = document.getElementsByClassName("fab-wrapper")[0];
 const $center_card = document.getElementsByClassName("center-card")[0];
 

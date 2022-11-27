@@ -31,3 +31,15 @@ textarea:hover, input:hover, button:hover{
   outline: none;
   transform: scale(1.05);
 }
+
+.workout-btn{
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.workout-btn:hover{
+  transform: translate(-50%, 0%) scale(1.05);
+  cursor: pointer;
+}

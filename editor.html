@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editor</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        /* background-color: #02090f; */
+      }
+
+      .leftEditor {
+        width: 50%;
+        min-height: 100vh;
+        outline: none;
+        resize: none;
+        border: none;
+        padding: 2em;
+        font-size: 1.5em;
+        font-family: "Mochiy Pop P One", sans-serif;
+        background-color: #02090f;
+        font-weight: medium;
+        color: rgb(108, 236, 119);
+        overflow-y: scroll;
+      }
+
+      .rightEditor {
+        width: 50%;
+        min-height: 100vh;
+        outline: none;
+        resize: none;
+        border: none;
+        padding: 2em;
+        font-size: 1.5em;
+        font-family: "Mochiy Pop P One", sans-serif;
+        background-color: #02090f;
+        font-weight: medium;
+        color: rgb(252, 149, 238);
+        overflow-y: scroll;
+      }
+
+      .notice {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.5em;
+        padding: 0.5em;
+        width: 100%;
+        font-family: "Mochiy Pop P One", sans-serif;
+        text-align: center;
+        display: none;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      *::-webkit-scrollbar {
+        display: none;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <textarea class="leftEditor" rows="20" cols="20"></textarea>
+      <textarea class="rightEditor" rows="20" cols="20">
+        Right Editor
+      </textarea>
+    </div>
+    <div class="notice">Unsaved</div>
+    <script>
+      let currentText = {}, savedText = {};
+
+      function handleChange(e,dir) {
+        currentText[dir] = e.target.value;
+        if (currentText[dir] !== savedText[dir]) {
+          document.querySelector(".notice").style.display = "block";
+        } else {
+          document.querySelector(".notice").style.display = "none";
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var leftEditor = document.querySelector(".leftEditor");
+        savedText.left = localStorage.getItem("leftEditor");
+        leftEditor.value = savedText.left;
+        currentText.left = savedText.left;
+        
+        var rightEditor = document.querySelector(".rightEditor");
+        savedText.right = localStorage.getItem("rightEditor");
+        rightEditor.value = savedText.right;
+        currentText.right = savedText.right;
+        
+        leftEditor.addEventListener("input",(e)=>{handleChange(e,"left")});
+        rightEditor.addEventListener("input",(e)=>{handleChange(e,"right")});
+      });
+
+      function saveIt() {
+        localStorage.setItem("leftEditor", document.querySelector(".leftEditor").value);
+        localStorage.setItem("rightEditor", document.querySelector(".rightEditor").value);
+        document.querySelector(".notice").style.display = "none";
+      }
+      document.querySelector('.leftEditor').addEventListener("keydown", function (e) {
+        if (e.ctrlKey && e.keyCode == 83) {
+          e.preventDefault();
+          saveIt();
+        }
+        if (e.keyCode == 9) {
+          e.preventDefault();
+          let leftEditor = document.querySelector(".leftEditor");
+          var start = leftEditor.selectionStart;
+          var end = leftEditor.selectionEnd;
+          leftEditor.value =
+            leftEditor.value.substring(0, start) +
+            "    " +
+            leftEditor.value.substring(start, end) +
+            leftEditor.value.substring(end);
+          leftEditor.selectionStart = leftEditor.selectionEnd = start + 4;
+          currentText.left = leftEditor.value;
+          handleChange(e,"left");
+        }
+      });
+      document.querySelector('.rightEditor').addEventListener("keydown", function (e) {
+        if (e.ctrlKey && e.keyCode == 83) {
+          e.preventDefault();
+          saveIt();
+        }
+        if (e.keyCode == 9) {
+          e.preventDefault();
+          let rightEditor = document.querySelector(".rightEditor");
+          var start = rightEditor.selectionStart;
+          var end = rightEditor.selectionEnd;
+          rightEditor.value =
+            rightEditor.value.substring(0, start) +
+            "    " +
+            rightEditor.value.substring(start, end) +
+            rightEditor.value.substring(end);
+          rightEditor.selectionStart = rightEditor.selectionEnd = start + 4;
+          handleChange(e,"right");
+        }
+      });
+    </script>
+  </body>
+</html>

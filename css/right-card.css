@@ -60,3 +60,7 @@
   font-size: 0.8em;
 }
 
+#todo-frame{
+  height: 80vh;
+  border-radius: 4px;
+}
